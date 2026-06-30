@@ -1,21 +1,14 @@
-name: Java CI
+name: Hello GitHub
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  build:
+  hello:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Build Project
-        run: mvn clean install
+      - name: Print Message
+        run: echo "Hello, GitHub Actions!"
